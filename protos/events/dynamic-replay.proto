@@ -1,0 +1,73 @@
+syntax = "proto3";
+
+option go_package = "github.com/batchcorp/collector-schemas/build/go/protos/events";
+option java_package = "sh.batch.services";
+option java_multiple_files = true;
+
+package events;
+
+import "outbound.proto";
+
+// DynamicReplay is an envelope message for dynamic replay communication from dproxy to plumber
+message DynamicReplay {
+
+  enum Type {
+    UNSET = 0;
+
+    // Sent by plumber to dProxy
+    AUTH_REQUEST = 1;
+
+    // Sent by dProxy to plumber
+    AUTH_RESPONSE = 2;
+
+    // Sent by dProxy to plumber
+    // Contains an events.Outbound message with a replay payload
+    OUTBOUND_MESSAGE = 3;
+
+    // Sent by dProxy to plumber
+    // Replicates an ISB replay event message for display in plumber logs
+    REPLAY_EVENT = 4;
+  }
+
+  Type type = 1;
+
+  string replay_id = 2;
+
+  oneof payload {
+    AuthRequest auth_request = 100;
+
+    AuthResponse auth_response = 101;
+
+    events.Outbound outbound_message = 102;
+
+    ReplayEvent replay_message = 103;
+  }
+}
+
+message AuthRequest {
+  string token = 1;
+  string message_bus = 2;
+}
+
+message AuthResponse {
+  // Whether or not the connection is authorized
+  bool authorized = 1;
+
+  // Error message if any
+  string message = 2;
+}
+
+message ReplayEvent {
+  enum Type {
+    UNSET = 0;
+    CREATE_REPLAY = 1;
+    PAUSE_REPLAY = 2;
+    RESUME_REPLAY = 3;
+    ABORT_REPLAY = 4;
+    FINISH_REPLAY = 5;
+  }
+
+  Type type = 1;
+  string replay_id = 2;
+}
+

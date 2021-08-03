@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option go_package = "github.com/batchcorp/collector-schemas/build/go/protos/records";
+option java_package = "sh.batch.events.records";
+
+package records;
+
+// See: https://godoc.org/github.com/datacratic/aws-sdk-go/service/sqs#Message
+message SQSRecord {
+    map<string, string> attributes = 1;
+    map<string, SQSRecordMessageAttribute> messageattributes = 2;
+    string messageid = 3;
+    string receipt = 4;
+    bytes body = 5;
+    int64 timestamp = 6;
+}
+
+message SQSRecordMessageAttribute {
+	string datatype = 1;
+	string stringvalue = 2;
+	bytes binaryvalue = 3;
+}

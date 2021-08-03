@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+option go_package = "github.com/batchcorp/collector-schemas/build/go/protos/records";
+option java_package = "sh.batch.events.records";
+
+package records;
+
+// Inbound messages from plumber will arrive at the gRPC collector
+// encoded as this record. The gRPC collector will stuff this message into a
+// Manifest.record (events/manifest.proto) and put it on the HSB.
+//
+// Authorization will be passed via gRPC metadata under the 'BatchToken' key.
+// Metadata ref: https://github.com/grpc/grpc-go/blob/master/Documentation/grpc-metadata.md
+
+message AMQPHeader {
+    string key = 1;
+    string value = 2;
+}
+
+// See: https://godoc.org/github.com/streadway/amqp#Delivery
+message AMQPSinkRecord {
+    bytes body = 1;
+    int64 timestamp = 2;
+    string type = 3;
+    string exchange = 4;
+    string routing_key = 5;
+    string content_type = 6;
+    string content_encoding = 7;
+    int32 priority = 8;
+    string expiration = 9;
+    string message_id = 10;
+    string user_id = 11;
+    string app_id = 12;
+    string reply_to = 13;
+    string correlation_id = 14;
+    repeated AMQPHeader headers = 15;
+}

@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = "github.com/batchcorp/collector-schemas/build/go/protos/records";
+option java_package = "sh.batch.events.records";
+
+package records;
+
+message RedisStreamsRecord {
+    string id = 1;
+    string key = 2;
+    string value = 3;
+    string stream = 4;
+    int64 timestamp = 5; // unix nano
+}

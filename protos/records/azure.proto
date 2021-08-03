@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+option go_package = "github.com/batchcorp/collector-schemas/build/go/protos/records";
+option java_package = "sh.batch.events.records";
+
+package records;
+
+// Inbound messages from plumber will arrive at the gRPC collector
+// encoded as this record. The gRPC collector will stuff this message into a
+// Manifest.record (events/manifest.proto) and put it on the HSB.
+//
+// Authorization will be passed via gRPC metadata under the 'BatchToken' key.
+// Metadata ref: https://github.com/grpc/grpc-go/blob/master/Documentation/grpc-metadata.md
+
+// See: https://github.com/Azure/azure-service-bus-go/blob/78c960db000c65f4e32d01371b496d5b33f59c38/message.go#L40
+message AzureSinkRecord {
+  string content_type = 1;
+  string correlation_id = 2;
+  bytes data = 3;
+  uint32 delivery_count = 4;
+  string session_id = 5;
+  uint32 group_sequence = 6;
+  string id = 7;
+  string label = 8;
+  string reply_to = 9;
+  string reply_to_group_id = 10;
+  string to = 11;
+  int64 ttl = 12;
+  string lock_token = 13;
+  AzureSystemProperties system_properties = 14;
+  map<string, string> user_properties = 15;
+  uint32 format = 16;
+}
+
+message AzureSystemProperties {
+  int64 locked_until = 1;
+  int64 sequence_number = 2;
+  int32 partition_id = 3;
+  string partition_key = 4;
+  int64 enqueued_time = 5;
+  string dead_letter_source = 6;
+  int64 scheduled_enqueue_time = 7;
+  int64 enqueued_sequence_number = 8;
+  string via_partition_key = 9;
+  map<string,string>annotations = 10;
+}

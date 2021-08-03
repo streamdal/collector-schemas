@@ -1,0 +1,131 @@
+syntax = "proto3";
+
+option go_package = "github.com/batchcorp/collector-schemas/build/go/protos";
+option java_package = "sh.batch.services";
+option java_multiple_files = true;
+
+package protos;
+
+import "common/status.proto";
+import "records/generic.proto";
+import "records/amqp.proto";
+import "records/kafka.proto";
+import "records/sqs.proto";
+import "records/azure.proto";
+import "records/gcp.proto";
+import "records/redis.proto";
+import "records/redis-streams.proto";
+import "records/mqtt.proto";
+import "records/nsq.proto";
+
+// This is the gRPC service definition for the Batch public gRPC collector.
+
+service GRPCCollector {
+rpc AddRecord(GenericRecordRequest) returns (GenericRecordResponse);
+rpc AddAMQPRecord(AMQPRecordRequest) returns (AMQPRecordResponse);
+rpc AddKafkaRecord(KafkaSinkRecordRequest) returns (KafkaSinkRecordResponse);
+rpc AddSQSRecord(SQSRecordRequest) returns (SQSRecordResponse);
+rpc AddAzureRecord(AzureRecordRequest) returns (AzureRecordResponse);
+rpc AddGCPRecord(GCPRecordRequest) returns (GCPRecordResponse);
+rpc AddRedisRecord(RedisRecordRequest) returns (RedisRecordResponse);
+rpc AddRedisStreamsRecord(RedisStreamsRecordRequest) returns (RedisStreamsRecordResponse);
+rpc AddMQTTRecord(MQTTRecordRequest) returns (MQTTRecordResponse);
+rpc AddNSQRecord(NSQRecordRequest) returns (NSQRecordResponse);
+rpc Test(TestRequest) returns (TestResponse);
+}
+
+message GenericRecordRequest {
+repeated records.GenericRecord records = 1;
+}
+
+message GenericRecordResponse {
+int64 num_records_processed = 1;
+events.Status status = 2;
+}
+
+message AMQPRecordRequest {
+repeated records.AMQPSinkRecord records = 1;
+}
+
+message AMQPRecordResponse {
+int64 num_records_processed = 1;
+events.Status status = 2;
+}
+
+message KafkaSinkRecordRequest {
+repeated records.KafkaSinkRecord records = 1;
+}
+
+message KafkaSinkRecordResponse {
+int64 num_records_processed = 1;
+events.Status status = 2;
+}
+
+message SQSRecordRequest {
+repeated records.SQSRecord records = 1;
+}
+
+message SQSRecordResponse {
+int64 num_records_processed = 1;
+events.Status status = 2;
+}
+
+message AzureRecordRequest {
+repeated records.AzureSinkRecord records = 1;
+}
+
+message AzureRecordResponse {
+int64 num_records_processed = 1;
+events.Status status = 2;
+}
+
+message GCPRecordRequest {
+repeated records.GCPRecord records = 1;
+}
+
+message GCPRecordResponse {
+int64 num_records_processed = 1;
+events.Status status = 2;
+}
+
+message RedisRecordRequest {
+repeated records.RedisRecord records = 1;
+}
+
+message RedisRecordResponse {
+int64 num_records_processed = 1;
+events.Status status = 2;
+}
+
+message RedisStreamsRecordRequest {
+repeated records.RedisStreamsRecord records = 1;
+}
+
+message RedisStreamsRecordResponse {
+int64 num_records_processed = 1;
+events.Status status = 2;
+}
+
+message MQTTRecordRequest {
+repeated records.MQTTRecord records = 1;
+}
+
+message MQTTRecordResponse {
+int64 num_records_processed = 1;
+events.Status status = 2;
+}
+
+message NSQRecordRequest {
+repeated records.NSQRecord records = 1;
+}
+
+message NSQRecordResponse {
+int64 num_records_processed = 1;
+events.Status status = 2;
+}
+
+message TestRequest {}
+
+message TestResponse {
+events.Status status = 1;
+}
