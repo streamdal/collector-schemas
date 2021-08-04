@@ -39,15 +39,17 @@ generate/go:
 	mkdir -p build/go/protos/common
 	mkdir -p build/go/protos/records
 	mkdir -p build/go/protos/events
+	mkdir -p build/go/protos/services
 
 	docker run --rm -w $(PWD) -v $(PWD):$(PWD) -w${PWD} jaegertracing/protobuf:0.2.0 \
 	--proto_path=./protos \
 	--proto_path=./protos/common \
 	--proto_path=./protos/records \
 	--proto_path=./protos/events \
+	--proto_path=./protos/services \
 	--go_out=plugins=grpc:build/go/protos \
 	--go_opt=paths=source_relative \
-	protos/*.proto
+	protos/services/*.proto
 
 
 	docker run --rm -w $(PWD) -v $(PWD):$(PWD) -w${PWD} jaegertracing/protobuf:0.2.0 \
