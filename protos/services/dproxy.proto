@@ -10,6 +10,6 @@ import "events/dynamic-replay.proto";
 
 // Dproxy service is used by dproxy to send replay events to a running instance of plumber
 service DProxy {
-  rpc Connect(events.DynamicReplay) returns (stream events.DynamicReplay);
+    rpc Connect(events.DynamicReplay) returns (stream events.DynamicReplay);
 }
 
