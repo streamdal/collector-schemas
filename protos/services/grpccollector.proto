@@ -4,7 +4,7 @@ option go_package = "github.com/batchcorp/collector-schemas/build/go/protos/serv
 option java_package = "sh.batch.services";
 option java_multiple_files = true;
 
-package protos;
+package services;
 
 import "common/status.proto";
 import "records/generic.proto";
