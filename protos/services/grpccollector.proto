@@ -17,6 +17,7 @@ import "records/redis.proto";
 import "records/redis-streams.proto";
 import "records/mqtt.proto";
 import "records/nsq.proto";
+import "records/kubemq.proto";
 
 // This is the gRPC service definition for the Batch public gRPC collector.
 
@@ -31,6 +32,7 @@ service GRPCCollector {
     rpc AddRedisStreamsRecord(RedisStreamsRecordRequest) returns (RedisStreamsRecordResponse);
     rpc AddMQTTRecord(MQTTRecordRequest) returns (MQTTRecordResponse);
     rpc AddNSQRecord(NSQRecordRequest) returns (NSQRecordResponse);
+    rpc AddKubeMQRecord(KubeMQRecordRequest) returns (KubeMQRecordResponse);
     rpc Test(TestRequest) returns (TestResponse);
 }
 
@@ -120,6 +122,15 @@ message NSQRecordRequest {
 }
 
 message NSQRecordResponse {
+    int64 num_records_processed = 1;
+    events.Status status = 2;
+}
+
+message KubeMQRecordRequest {
+    repeated records.KubeMQRecord records = 1;
+}
+
+message KubeMQRecordResponse {
     int64 num_records_processed = 1;
     events.Status status = 2;
 }

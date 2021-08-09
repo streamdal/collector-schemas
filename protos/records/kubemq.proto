@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option go_package = "github.com/batchcorp/collector-schemas/build/go/protos/records";
+
+package records;
+
+// Inbound messages from kafka sink connector will arrive at the gRPC collector
+// encoded as this record. The gRPC collector will stuff this message into a
+// Manifest.record (events/manifest.proto) and put it on the HSB.
+//
+// Authorization will be passed via gRPC metadata under the 'BatchToken' key.
+// Metadata ref: https://github.com/grpc/grpc-go/blob/master/Documentation/grpc-metadata.md
+
+option java_package = "sh.batch.events.records";
+
+message KubeMQRecord {
+  string id = 1;
+  string client_id = 2;
+  string channel = 3;
+  bytes value = 4;
+  int64 timestamp = 5;
+  int64 sequence = 6;
+}
