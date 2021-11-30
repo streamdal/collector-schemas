@@ -9,4 +9,5 @@ message Outbound {
   string replay_id = 1;
   bytes blob = 2;
   bool last = 3;
+  map<string,string> metadata = 4;
 }
