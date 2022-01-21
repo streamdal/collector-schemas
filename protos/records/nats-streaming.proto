@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "github.com/batchcorp/collector-schemas/build/go/protos/records";
+option java_package = "sh.batch.events.records";
+
+package records;
+
+message NATSStreamingRecord {
+  string stream = 1;
+  bytes value = 2;
+  uint64 sequence = 3;
+  string subject = 5;
+  bool redelivered = 6;
+  uint32 redelivery_count = 7;
+  uint32 crc32 = 7;
+  int64 timestamp = 8; // unix nano
+}
