@@ -19,6 +19,8 @@ import "records/mqtt.proto";
 import "records/nsq.proto";
 import "records/kubemq.proto";
 import "records/nats.proto";
+import "records/nats-streaming.proto";
+import "records/nats-jetstream.proto";
 
 // This is the gRPC service definition for the Batch public gRPC collector.
 
@@ -145,6 +147,26 @@ message NATSRecordResponse {
     int64 num_records_processed = 1;
     events.Status status = 2;
 }
+
+message NATSJetStreamRecordRequest {
+    repeated records.NATSJetStreamRecord records = 1;
+}
+
+message NATSJetStreamRecordResponse {
+    int64 num_records_processed = 1;
+    events.Status status = 2;
+}
+
+message NATSStreamingRecordRequest {
+    repeated records.NATSStreamingRecord records = 1;
+}
+
+message NATSStreamingRecordResponse {
+    int64 num_records_processed = 1;
+    events.Status status = 2;
+}
+
+
 
 
 message TestRequest {}
