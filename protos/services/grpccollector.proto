@@ -37,6 +37,8 @@ service GRPCCollector {
     rpc AddNSQRecord(NSQRecordRequest) returns (NSQRecordResponse);
     rpc AddKubeMQRecord(KubeMQRecordRequest) returns (KubeMQRecordResponse);
     rpc AddNATSRecord(NATSRecordRequest) returns (NATSRecordResponse);
+    rpc AddNATSStreamingRecord(NATSStreamingRecordRequest) returns (NATSStreamingRecordResponse);
+    rpc AddNATSJetStreamRecord(NATSJetStreamRecordRequest) returns (NATSJetStreamRecordResponse);
     rpc Test(TestRequest) returns (TestResponse);
 }
 
@@ -165,9 +167,6 @@ message NATSStreamingRecordResponse {
     int64 num_records_processed = 1;
     events.Status status = 2;
 }
-
-
-
 
 message TestRequest {}
 
