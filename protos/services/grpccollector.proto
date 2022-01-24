@@ -19,8 +19,8 @@ import "records/mqtt.proto";
 import "records/nsq.proto";
 import "records/kubemq.proto";
 import "records/nats.proto";
-import "records/nats-streaming.proto";
-import "records/nats-jetstream.proto";
+import "records/nats_streaming.proto";
+import "records/nats_jetstream.proto";
 
 // This is the gRPC service definition for the Batch public gRPC collector.
 
