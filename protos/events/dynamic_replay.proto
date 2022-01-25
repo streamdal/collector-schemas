@@ -12,7 +12,7 @@ option java_multiple_files = true;
 message DynamicReplay {
 
   enum Type {
-    UNSET_UNSPECIFIED = 0;
+    UNSET = 0;
 
     // Sent by plumber to dProxy
     AUTH_REQUEST = 1;
@@ -59,7 +59,7 @@ message AuthResponse {
 
 message ReplayEvent {
   enum Type {
-    UNSET_UNSPECIFIED = 0;
+    UNSET = 0;
     CREATE_REPLAY = 1;
     PAUSE_REPLAY = 2;
     RESUME_REPLAY = 3;
