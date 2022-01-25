@@ -1,175 +1,176 @@
 syntax = "proto3";
 
+package services;
+
+import "common/status.proto";
+import "records/amqp.proto";
+import "records/azure.proto";
+import "records/gcp.proto";
+import "records/generic.proto";
+import "records/kafka.proto";
+import "records/kubemq.proto";
+import "records/mqtt.proto";
+import "records/nats.proto";
+import "records/nats_jetstream.proto";
+import "records/nats_streaming.proto";
+import "records/nsq.proto";
+import "records/redis.proto";
+import "records/redis_streams.proto";
+import "records/sqs.proto";
+
 option go_package = "github.com/batchcorp/collector-schemas/build/go/protos/services";
 option java_package = "sh.batch.services";
 option java_multiple_files = true;
 
-package services;
-
-import "common/status.proto";
-import "records/generic.proto";
-import "records/amqp.proto";
-import "records/kafka.proto";
-import "records/sqs.proto";
-import "records/azure.proto";
-import "records/gcp.proto";
-import "records/redis.proto";
-import "records/redis-streams.proto";
-import "records/mqtt.proto";
-import "records/nsq.proto";
-import "records/kubemq.proto";
-import "records/nats.proto";
-import "records/nats_streaming.proto";
-import "records/nats_jetstream.proto";
-
 // This is the gRPC service definition for the Batch public gRPC collector.
 
 service GRPCCollector {
-    rpc AddRecord(GenericRecordRequest) returns (GenericRecordResponse);
-    rpc AddAMQPRecord(AMQPRecordRequest) returns (AMQPRecordResponse);
-    rpc AddKafkaRecord(KafkaSinkRecordRequest) returns (KafkaSinkRecordResponse);
-    rpc AddSQSRecord(SQSRecordRequest) returns (SQSRecordResponse);
-    rpc AddAzureRecord(AzureRecordRequest) returns (AzureRecordResponse);
-    rpc AddGCPRecord(GCPRecordRequest) returns (GCPRecordResponse);
-    rpc AddRedisRecord(RedisRecordRequest) returns (RedisRecordResponse);
-    rpc AddRedisStreamsRecord(RedisStreamsRecordRequest) returns (RedisStreamsRecordResponse);
-    rpc AddMQTTRecord(MQTTRecordRequest) returns (MQTTRecordResponse);
-    rpc AddNSQRecord(NSQRecordRequest) returns (NSQRecordResponse);
-    rpc AddKubeMQRecord(KubeMQRecordRequest) returns (KubeMQRecordResponse);
-    rpc AddNATSRecord(NATSRecordRequest) returns (NATSRecordResponse);
-    rpc AddNATSStreamingRecord(NATSStreamingRecordRequest) returns (NATSStreamingRecordResponse);
-    rpc AddNATSJetStreamRecord(NATSJetStreamRecordRequest) returns (NATSJetStreamRecordResponse);
-    rpc Test(TestRequest) returns (TestResponse);
+  rpc AddRecord(GenericRecordRequest) returns (GenericRecordResponse);
+  rpc AddAMQPRecord(AMQPRecordRequest) returns (AMQPRecordResponse);
+  rpc AddKafkaRecord(KafkaSinkRecordRequest) returns (KafkaSinkRecordResponse);
+  rpc AddSQSRecord(SQSRecordRequest) returns (SQSRecordResponse);
+  rpc AddAzureRecord(AzureRecordRequest) returns (AzureRecordResponse);
+  rpc AddGCPRecord(GCPRecordRequest) returns (GCPRecordResponse);
+  rpc AddRedisRecord(RedisRecordRequest) returns (RedisRecordResponse);
+  rpc AddRedisStreamsRecord(RedisStreamsRecordRequest) returns (RedisStreamsRecordResponse);
+  rpc AddMQTTRecord(MQTTRecordRequest) returns (MQTTRecordResponse);
+  rpc AddNSQRecord(NSQRecordRequest) returns (NSQRecordResponse);
+  rpc AddKubeMQRecord(KubeMQRecordRequest) returns (KubeMQRecordResponse);
+  rpc AddNATSRecord(NATSRecordRequest) returns (NATSRecordResponse);
+  rpc AddNATSStreamingRecord(NATSStreamingRecordRequest) returns (NATSStreamingRecordResponse);
+  rpc AddNATSJetStreamRecord(NATSJetStreamRecordRequest) returns (NATSJetStreamRecordResponse);
+  rpc Test(TestRequest) returns (TestResponse);
 }
 
 message GenericRecordRequest {
-    repeated records.GenericRecord records = 1;
+  repeated records.GenericRecord records = 1;
 }
 
 message GenericRecordResponse {
-    int64 num_records_processed = 1;
-    events.Status status = 2;
+  int64 num_records_processed = 1;
+  events.Status status = 2;
 }
 
 message AMQPRecordRequest {
-    repeated records.AMQPSinkRecord records = 1;
+  repeated records.AMQPSinkRecord records = 1;
 }
 
 message AMQPRecordResponse {
-    int64 num_records_processed = 1;
-    events.Status status = 2;
+  int64 num_records_processed = 1;
+  events.Status status = 2;
 }
 
 message KafkaSinkRecordRequest {
-    repeated records.KafkaSinkRecord records = 1;
+  repeated records.KafkaSinkRecord records = 1;
 }
 
 message KafkaSinkRecordResponse {
-    int64 num_records_processed = 1;
-    events.Status status = 2;
+  int64 num_records_processed = 1;
+  events.Status status = 2;
 }
 
 message SQSRecordRequest {
-    repeated records.SQSRecord records = 1;
+  repeated records.SQSRecord records = 1;
 }
 
 message SQSRecordResponse {
-    int64 num_records_processed = 1;
-    events.Status status = 2;
+  int64 num_records_processed = 1;
+  events.Status status = 2;
 }
 
 message AzureRecordRequest {
-    repeated records.AzureSinkRecord records = 1;
+  repeated records.AzureSinkRecord records = 1;
 }
 
 message AzureRecordResponse {
-    int64 num_records_processed = 1;
-    events.Status status = 2;
+  int64 num_records_processed = 1;
+  events.Status status = 2;
 }
 
 message GCPRecordRequest {
-    repeated records.GCPRecord records = 1;
+  repeated records.GCPRecord records = 1;
 }
 
 message GCPRecordResponse {
-    int64 num_records_processed = 1;
-    events.Status status = 2;
+  int64 num_records_processed = 1;
+  events.Status status = 2;
 }
 
 message RedisRecordRequest {
-repeated records.RedisRecord records = 1;
+  repeated records.RedisRecord records = 1;
 }
 
 message RedisRecordResponse {
-    int64 num_records_processed = 1;
-    events.Status status = 2;
+  int64 num_records_processed = 1;
+  events.Status status = 2;
 }
 
 message RedisStreamsRecordRequest {
-    repeated records.RedisStreamsRecord records = 1;
+  repeated records.RedisStreamsRecord records = 1;
 }
 
 message RedisStreamsRecordResponse {
-    int64 num_records_processed = 1;
-    events.Status status = 2;
+  int64 num_records_processed = 1;
+  events.Status status = 2;
 }
 
 message MQTTRecordRequest {
-    repeated records.MQTTRecord records = 1;
+  repeated records.MQTTRecord records = 1;
 }
 
 message MQTTRecordResponse {
-    int64 num_records_processed = 1;
-    events.Status status = 2;
+  int64 num_records_processed = 1;
+  events.Status status = 2;
 }
 
 message NSQRecordRequest {
-    repeated records.NSQRecord records = 1;
+  repeated records.NSQRecord records = 1;
 }
 
 message NSQRecordResponse {
-    int64 num_records_processed = 1;
-    events.Status status = 2;
+  int64 num_records_processed = 1;
+  events.Status status = 2;
 }
 
 message KubeMQRecordRequest {
-    repeated records.KubeMQRecord records = 1;
+  repeated records.KubeMQRecord records = 1;
 }
 
 message KubeMQRecordResponse {
-    int64 num_records_processed = 1;
-    events.Status status = 2;
+  int64 num_records_processed = 1;
+  events.Status status = 2;
 }
 
 message NATSRecordRequest {
-    repeated records.NATSRecord records = 1;
+  repeated records.NATSRecord records = 1;
 }
 
 message NATSRecordResponse {
-    int64 num_records_processed = 1;
-    events.Status status = 2;
+  int64 num_records_processed = 1;
+  events.Status status = 2;
 }
 
 message NATSJetStreamRecordRequest {
-    repeated records.NATSJetStreamRecord records = 1;
+  repeated records.NATSJetStreamRecord records = 1;
 }
 
 message NATSJetStreamRecordResponse {
-    int64 num_records_processed = 1;
-    events.Status status = 2;
+  int64 num_records_processed = 1;
+  events.Status status = 2;
 }
 
 message NATSStreamingRecordRequest {
-    repeated records.NATSStreamingRecord records = 1;
+  repeated records.NATSStreamingRecord records = 1;
 }
 
 message NATSStreamingRecordResponse {
-    int64 num_records_processed = 1;
-    events.Status status = 2;
+  int64 num_records_processed = 1;
+  events.Status status = 2;
 }
 
-message TestRequest {}
+message TestRequest {
+}
 
 message TestResponse {
-    events.Status status = 1;
+  events.Status status = 1;
 }

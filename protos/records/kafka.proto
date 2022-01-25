@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-option go_package = "github.com/batchcorp/collector-schemas/build/go/protos/records";
-
 package records;
+
+option go_package = "github.com/batchcorp/collector-schemas/build/go/protos/records";
 
 // Inbound messages from kafka sink connector will arrive at the gRPC collector
 // encoded as this record. The gRPC collector will stuff this message into a
@@ -14,16 +14,16 @@ package records;
 option java_package = "sh.batch.events.records";
 
 message KafkaHeader {
-    string key = 1;
-    string value = 2;
+  string key = 1;
+  string value = 2;
 }
 
 message KafkaSinkRecord {
-    string topic = 1;
-    bytes key = 2;
-    bytes value = 3;
-    int64 timestamp = 4;
-    int64 offset = 5;
-    int32 partition = 6;
-    repeated KafkaHeader headers = 7;
+  string topic = 1;
+  bytes key = 2;
+  bytes value = 3;
+  int64 timestamp = 4;
+  int64 offset = 5;
+  int32 partition = 6;
+  repeated KafkaHeader headers = 7;
 }

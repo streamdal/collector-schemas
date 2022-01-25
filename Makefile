@@ -12,8 +12,9 @@ help:
 .PHONY: setup/darwin
 setup/darwin: description = Install protobuf tooling for macOS
 setup/darwin:
-	# Protocol compiler
-	brew install protobuf@3.11.4
+	# Protocol compiler and linter
+	brew tap yoheimuta/protolint
+	brew install protobuf@3.11.4 protolint
 
 	# Go plugin used by the protocol compiler
 	go get -u github.com/golang/protobuf/protoc-gen-go
@@ -76,8 +77,19 @@ generate/go:
 	--go_opt=paths=source_relative \
 	protos/records/*.proto
 
+.PHONY: local
+local: description = Compile protobuf schemas for Go and copy to plumber/grpc-collector projects
+local: generate/go
+local:
+	cp -R build/go/protos/ ~/Code/plumber/vendor/github.com/batchcorp/collector-schemas/build/go/protos/
+	cp -R build/go/protos/ ~/Code/grpc-collector/vendor/github.com/batchcorp/collector-schemas/build/go/protos/
 
 .PHONY: clean-go
-clean: description = Remove all go build artifacts
-clean:
+clean-go: description = Remove all go build artifacts
+clean-go:
 	rm -rf ./build/go/*
+
+.PHONY: lint
+lint: description = Run protolint
+lint:
+	protolint protos/

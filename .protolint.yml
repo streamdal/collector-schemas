@@ -1,0 +1,5 @@
+lint:
+  rules:
+    remove:
+      - MAX_LINE_LENGTH
+      - ENUM_FIELD_NAMES_PREFIX

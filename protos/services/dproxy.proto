@@ -1,15 +1,15 @@
 syntax = "proto3";
 
+package services;
+
+import "events/dynamic_replay.proto";
+
 option go_package = "github.com/batchcorp/collector-schemas/build/go/protos/services";
 option java_package = "sh.batch.services";
 option java_multiple_files = true;
 
-package services;
-
-import "events/dynamic-replay.proto";
-
 // Dproxy service is used by dproxy to send replay events to a running instance of plumber
 service DProxy {
-    rpc Connect(events.DynamicReplay) returns (stream events.DynamicReplay);
+  rpc Connect(events.DynamicReplay) returns (stream events.DynamicReplay);
 }
 

@@ -1,9 +1,9 @@
 syntax = "proto3";
 
+package records;
+
 option go_package = "github.com/batchcorp/collector-schemas/build/go/protos/records";
 option java_package = "sh.batch.events.records";
-
-package records;
 
 message NATSJetStreamRecord {
   string stream = 1;

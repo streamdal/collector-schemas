@@ -1,0 +1,11 @@
+name: "lint protobuf"
+on: pull_request
+
+jobs:
+  pr-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - name: Protobuf Liting
+        run: |
+          make lint
