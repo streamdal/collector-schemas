@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-option go_package = "github.com/batchcorp/collector-schemas/build/go/protos/records";
-
 package records;
+
+option go_package = "github.com/batchcorp/collector-schemas/build/go/protos/records";
 
 // Inbound messages from kafka sink connector will arrive at the gRPC collector
 // encoded as this record. The gRPC collector will stuff this message into a

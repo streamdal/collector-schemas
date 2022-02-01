@@ -1,9 +1,9 @@
 syntax = "proto3";
 
+package records;
+
 option go_package = "github.com/batchcorp/collector-schemas/build/go/protos/records";
 option java_package = "sh.batch.events.records";
-
-package records;
 
 // Inbound messages from plumber will arrive at the gRPC collector
 // encoded as this record. The gRPC collector will stuff this message into a

@@ -1,12 +1,12 @@
 syntax = "proto3";
 
-option go_package = "github.com/batchcorp/collector-schemas/build/go/protos/events";
-option java_package = "sh.batch.services";
-option java_multiple_files = true;
-
 package events;
 
 import "outbound.proto";
+
+option go_package = "github.com/batchcorp/collector-schemas/build/go/protos/events";
+option java_package = "sh.batch.services";
+option java_multiple_files = true;
 
 // DynamicReplay is an envelope message for dynamic replay communication from dproxy to plumber
 message DynamicReplay {
