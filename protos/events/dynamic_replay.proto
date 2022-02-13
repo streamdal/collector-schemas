@@ -45,8 +45,25 @@ message DynamicReplay {
 }
 
 message AuthRequest {
+  // API Token generated in https://console.batch.sh
   string token = 1;
+
+  // Message bus type name, ex: kafka, rabbitmq, etc.
   string message_bus = 2;
+
+  // Plumber server mode needs permanent tunnels without creating multiple
+  // destinations in console for all running plumber instances  in a cluster.
+  // If cluster ID is specified, we will use that + team ID + connection ID = unique identifier
+  // so that we can always reconnect to the same tunnel.
+  //
+  // Dynamic replays without this value specified will be created as ephemeral tunnels.
+  // Ephemeral tunnels will be deleted after 3 hours of inactivity.
+  string plumber_cluster_id = 3;
+
+  // Dynamic destinations can be given a custom name to help identify them in the plumber server.
+  // If this value is empty, a default name will be generated based off of message_bus and the
+  // connecting IP address
+  string name = 4;
 }
 
 message AuthResponse {
