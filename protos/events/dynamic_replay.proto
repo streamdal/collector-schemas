@@ -65,8 +65,8 @@ message AuthRequest {
   // Ephemeral tunnels will be deleted after 3 hours of inactivity.
   string plumber_cluster_id = 4;
 
-  // Connection ID for the plumber server
-  string connection_id = 5;
+  // Dynamic tunnel ID
+  string dynamic_id = 5;
 }
 
 message AuthResponse {
