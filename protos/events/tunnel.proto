@@ -8,8 +8,8 @@ option go_package = "github.com/batchcorp/collector-schemas/build/go/protos/even
 option java_package = "sh.batch.services";
 option java_multiple_files = true;
 
-// DynamicReplay is an envelope message for dynamic replay communication from dproxy to plumber
-message DynamicReplay {
+// Tunnel is an envelope message for tunnel communication between dproxy and plumber
+message Tunnel {
 
   enum Type {
     UNSET = 0;
@@ -51,7 +51,7 @@ message AuthRequest {
   // Message bus type name, ex: kafka, rabbitmq, etc.
   string message_bus = 2;
 
-  // Dynamic destinations can be given a custom name to help identify them in the plumber server.
+  // Tunnels can be given a custom name to help identify them in the plumber server.
   // If this value is empty, a default name will be generated based off of message_bus and the
   // connecting IP address
   string name = 3;
@@ -61,12 +61,11 @@ message AuthRequest {
   // If cluster ID is specified, we will use that + team ID + connection ID = unique identifier
   // so that we can always reconnect to the same tunnel.
   //
-  // Dynamic replays without this value specified will be created as ephemeral tunnels.
+  // Tunnels without this value specified will be created as ephemeral tunnels.
   // Ephemeral tunnels will be deleted after 3 hours of inactivity.
   string plumber_cluster_id = 4;
 
-  // Dynamic tunnel ID
-  string dynamic_id = 5;
+  string tunnel_id = 5;
 }
 
 message AuthResponse {
