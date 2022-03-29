@@ -12,5 +12,6 @@ option java_multiple_files = true;
 service DProxy {
   rpc Connect(events.Tunnel) returns (stream events.Tunnel);
   rpc Auth(events.AuthRequest) returns (events.AuthResponse);
+  rpc DeleteTunnel(events.DeleteTunnelRequest) returns (events.DeleteTunnelResponse);
 }
 

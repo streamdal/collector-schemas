@@ -76,6 +76,21 @@ message AuthResponse {
   string message = 2;
 }
 
+message DeleteTunnelRequest {
+  // API Token generated in https://console.batch.sh
+  string token = 1;
+
+  string plumber_cluster_id = 2;
+
+  string tunnel_id = 3;
+}
+
+message DeleteTunnelResponse {
+  bool success = 1;
+
+  string message = 2;
+}
+
 message ReplayEvent {
   enum Type {
     UNSET = 0;
