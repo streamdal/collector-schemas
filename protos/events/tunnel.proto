@@ -121,5 +121,7 @@ message TunnelEvent {
     FORCE_DISCONNECT = 1;
   }
 
-  string tunnel_id = 1;
+  Type type = 1;
+
+  string tunnel_id = 2;
 }
