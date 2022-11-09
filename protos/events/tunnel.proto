@@ -27,6 +27,10 @@ message Tunnel {
     // Sent by dProxy to plumber
     // Replicates an ISB replay event message for display in plumber logs
     REPLAY_EVENT = 4;
+
+    // Sent by dProxy to plumber
+    // Currently only used for force-disconnecting an ephemeral tunnel
+    TUNNEL_EVENT = 5;
   }
 
   Type type = 1;
@@ -41,6 +45,8 @@ message Tunnel {
     events.Outbound outbound_message = 102;
 
     ReplayEvent replay_message = 103;
+
+    TunnelEvent tunnel_event = 104;
   }
 }
 
@@ -99,9 +105,21 @@ message ReplayEvent {
     RESUME_REPLAY = 3;
     ABORT_REPLAY = 4;
     FINISH_REPLAY = 5;
+    DISCONNECT = 6;
   }
 
   Type type = 1;
   string replay_id = 2;
 }
 
+message TunnelEvent {
+  enum Type {
+    UNSET = 0;
+
+    // Used when an ephemeral tunnel destination is deleted from ui-bff
+    // This action will cause dProxy to send this event, forcing plumber to disconnect
+    FORCE_DISCONNECT = 1;
+  }
+
+  string tunnel_id = 1;
+}
