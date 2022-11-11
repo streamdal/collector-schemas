@@ -72,6 +72,12 @@ message AuthRequest {
   string plumber_cluster_id = 4;
 
   string tunnel_id = 5;
+
+  // Version of plumber running. Not needed at the moment, but good future-proofing
+  string plumber_version = 6;
+
+  // ID of the plumber instance running. This will be saved in either NATS or ~/.batchsh/plumber.json
+  string plumber_id = 7;
 }
 
 message AuthResponse {
