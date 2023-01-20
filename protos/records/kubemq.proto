@@ -20,4 +20,5 @@ message KubeMQRecord {
   bytes value = 4;
   int64 timestamp = 5;
   int64 sequence = 6;
+  bool force_dead_letter = 7;
 }

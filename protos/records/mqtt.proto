@@ -13,4 +13,5 @@ message MQTTRecord {
   bool retained = 5;
   uint32 qos = 6;
   int64 timestamp = 7; // unix nano
+  bool force_dead_letter = 8;
 }

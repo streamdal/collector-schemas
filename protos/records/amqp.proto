@@ -34,7 +34,5 @@ message AMQPSinkRecord {
   string reply_to = 13;
   string correlation_id = 14;
   repeated AMQPHeader headers = 15;
-
-  // Whether this message was consumed from a dead-letter exchange
-  bool dead_letter = 16;
+  bool force_dead_letter = 16;
 }

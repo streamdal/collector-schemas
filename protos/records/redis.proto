@@ -9,4 +9,5 @@ message RedisRecord {
   string payload = 1;
   string channel = 2;
   int64 timestamp = 3; // unix nano
+  bool force_dead_letter = 4;
 }

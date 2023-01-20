@@ -13,6 +13,7 @@ message SQSRecord {
   string receipt = 4;
   bytes body = 5;
   int64 timestamp = 6;
+  bool force_dead_letter = 7;
 }
 
 message SQSRecordMessageAttribute {

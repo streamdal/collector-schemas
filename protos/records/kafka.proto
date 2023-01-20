@@ -26,4 +26,5 @@ message KafkaSinkRecord {
   int64 offset = 5;
   int32 partition = 6;
   repeated KafkaHeader headers = 7;
+  bool force_dead_letter = 8;
 }
