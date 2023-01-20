@@ -10,4 +10,5 @@ message GenericRecord {
   string source = 2;
   int64 timestamp = 3; // client unix nano
   map<string, string> metadata = 4;
+  bool force_dead_letter = 5;
 }

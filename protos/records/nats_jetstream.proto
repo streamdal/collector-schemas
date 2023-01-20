@@ -9,4 +9,5 @@ message NATSJetStreamRecord {
   string stream = 1;
   bytes value = 2;
   int64 timestamp = 3; // unix nano
+  bool force_dead_letter = 4;
 }

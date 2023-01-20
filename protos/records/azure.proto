@@ -30,6 +30,7 @@ message AzureSinkRecord {
   AzureSystemProperties system_properties = 14;
   map<string, string> user_properties = 15;
   uint32 format = 16;
+  bool force_dead_letter = 17;
 }
 
 message AzureSystemProperties {

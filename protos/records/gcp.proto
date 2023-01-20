@@ -12,4 +12,5 @@ message GCPRecord {
   int64 publish_time = 4;
   int32 delivery_attempt = 5;
   string ordering_key = 6;
+  bool force_dead_letter = 7;
 }

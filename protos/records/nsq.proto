@@ -13,4 +13,5 @@ message NSQRecord {
   string nsqd_address = 5;
   bytes value = 6;
   int64 timestamp = 7; // unix nano
+  bool force_dead_letter = 8;
 }

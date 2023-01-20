@@ -14,4 +14,5 @@ message NATSStreamingRecord {
   uint32 redelivery_count = 6;
   uint32 crc32 = 7;
   int64 timestamp = 8; // unix nano
+  bool force_dead_letter = 9;
 }
