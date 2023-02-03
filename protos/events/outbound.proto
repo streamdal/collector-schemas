@@ -10,4 +10,5 @@ message Outbound {
   bytes blob = 2;
   bool last = 3;
   map<string,string> metadata = 4;
+  int64 ingest_timestamp_nano = 5;
 }
