@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.2.0
 // - protoc             v3.21.6
-// source: services/dproxy.proto
+// source: services/cs_services_dproxy.proto
 
 package services
 
@@ -200,5 +200,5 @@ var DProxy_ServiceDesc = grpc.ServiceDesc{
 			ServerStreams: true,
 		},
 	},
-	Metadata: "services/dproxy.proto",
+	Metadata: "services/cs_services_dproxy.proto",
 }

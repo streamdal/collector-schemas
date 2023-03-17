@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.2.0
 // - protoc             v3.21.6
-// source: services/grpccollector.proto
+// source: services/cs_services_grpccollector.proto
 
 package services
 
@@ -603,5 +603,5 @@ var GRPCCollector_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "services/grpccollector.proto",
+	Metadata: "services/cs_services_grpccollector.proto",
 }

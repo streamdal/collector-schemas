@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.28.1
 // 	protoc        v3.21.6
-// source: services/grpccollector.proto
+// source: services/cs_services_grpccollector.proto
 
 package services
 
@@ -33,7 +33,7 @@ type GenericRecordRequest struct {
 func (x *GenericRecordRequest) Reset() {
 	*x = GenericRecordRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[0]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -46,7 +46,7 @@ func (x *GenericRecordRequest) String() string {
 func (*GenericRecordRequest) ProtoMessage() {}
 
 func (x *GenericRecordRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[0]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -59,7 +59,7 @@ func (x *GenericRecordRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GenericRecordRequest.ProtoReflect.Descriptor instead.
 func (*GenericRecordRequest) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{0}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *GenericRecordRequest) GetRecords() []*records.GenericRecord {
@@ -81,7 +81,7 @@ type GenericRecordResponse struct {
 func (x *GenericRecordResponse) Reset() {
 	*x = GenericRecordResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[1]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -94,7 +94,7 @@ func (x *GenericRecordResponse) String() string {
 func (*GenericRecordResponse) ProtoMessage() {}
 
 func (x *GenericRecordResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[1]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -107,7 +107,7 @@ func (x *GenericRecordResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GenericRecordResponse.ProtoReflect.Descriptor instead.
 func (*GenericRecordResponse) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{1}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *GenericRecordResponse) GetNumRecordsProcessed() int64 {
@@ -135,7 +135,7 @@ type AMQPRecordRequest struct {
 func (x *AMQPRecordRequest) Reset() {
 	*x = AMQPRecordRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[2]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -148,7 +148,7 @@ func (x *AMQPRecordRequest) String() string {
 func (*AMQPRecordRequest) ProtoMessage() {}
 
 func (x *AMQPRecordRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[2]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -161,7 +161,7 @@ func (x *AMQPRecordRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AMQPRecordRequest.ProtoReflect.Descriptor instead.
 func (*AMQPRecordRequest) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{2}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *AMQPRecordRequest) GetRecords() []*records.AMQPSinkRecord {
@@ -183,7 +183,7 @@ type AMQPRecordResponse struct {
 func (x *AMQPRecordResponse) Reset() {
 	*x = AMQPRecordResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[3]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -196,7 +196,7 @@ func (x *AMQPRecordResponse) String() string {
 func (*AMQPRecordResponse) ProtoMessage() {}
 
 func (x *AMQPRecordResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[3]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -209,7 +209,7 @@ func (x *AMQPRecordResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AMQPRecordResponse.ProtoReflect.Descriptor instead.
 func (*AMQPRecordResponse) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{3}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *AMQPRecordResponse) GetNumRecordsProcessed() int64 {
@@ -237,7 +237,7 @@ type KafkaSinkRecordRequest struct {
 func (x *KafkaSinkRecordRequest) Reset() {
 	*x = KafkaSinkRecordRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[4]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -250,7 +250,7 @@ func (x *KafkaSinkRecordRequest) String() string {
 func (*KafkaSinkRecordRequest) ProtoMessage() {}
 
 func (x *KafkaSinkRecordRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[4]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -263,7 +263,7 @@ func (x *KafkaSinkRecordRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use KafkaSinkRecordRequest.ProtoReflect.Descriptor instead.
 func (*KafkaSinkRecordRequest) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{4}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *KafkaSinkRecordRequest) GetRecords() []*records.KafkaSinkRecord {
@@ -285,7 +285,7 @@ type KafkaSinkRecordResponse struct {
 func (x *KafkaSinkRecordResponse) Reset() {
 	*x = KafkaSinkRecordResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[5]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -298,7 +298,7 @@ func (x *KafkaSinkRecordResponse) String() string {
 func (*KafkaSinkRecordResponse) ProtoMessage() {}
 
 func (x *KafkaSinkRecordResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[5]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -311,7 +311,7 @@ func (x *KafkaSinkRecordResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use KafkaSinkRecordResponse.ProtoReflect.Descriptor instead.
 func (*KafkaSinkRecordResponse) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{5}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *KafkaSinkRecordResponse) GetNumRecordsProcessed() int64 {
@@ -339,7 +339,7 @@ type SQSRecordRequest struct {
 func (x *SQSRecordRequest) Reset() {
 	*x = SQSRecordRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[6]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -352,7 +352,7 @@ func (x *SQSRecordRequest) String() string {
 func (*SQSRecordRequest) ProtoMessage() {}
 
 func (x *SQSRecordRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[6]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -365,7 +365,7 @@ func (x *SQSRecordRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SQSRecordRequest.ProtoReflect.Descriptor instead.
 func (*SQSRecordRequest) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{6}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *SQSRecordRequest) GetRecords() []*records.SQSRecord {
@@ -387,7 +387,7 @@ type SQSRecordResponse struct {
 func (x *SQSRecordResponse) Reset() {
 	*x = SQSRecordResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[7]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[7]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -400,7 +400,7 @@ func (x *SQSRecordResponse) String() string {
 func (*SQSRecordResponse) ProtoMessage() {}
 
 func (x *SQSRecordResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[7]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[7]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -413,7 +413,7 @@ func (x *SQSRecordResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SQSRecordResponse.ProtoReflect.Descriptor instead.
 func (*SQSRecordResponse) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{7}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *SQSRecordResponse) GetNumRecordsProcessed() int64 {
@@ -441,7 +441,7 @@ type AzureRecordRequest struct {
 func (x *AzureRecordRequest) Reset() {
 	*x = AzureRecordRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[8]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[8]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -454,7 +454,7 @@ func (x *AzureRecordRequest) String() string {
 func (*AzureRecordRequest) ProtoMessage() {}
 
 func (x *AzureRecordRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[8]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[8]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -467,7 +467,7 @@ func (x *AzureRecordRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AzureRecordRequest.ProtoReflect.Descriptor instead.
 func (*AzureRecordRequest) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{8}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{8}
 }
 
 func (x *AzureRecordRequest) GetRecords() []*records.AzureSinkRecord {
@@ -489,7 +489,7 @@ type AzureRecordResponse struct {
 func (x *AzureRecordResponse) Reset() {
 	*x = AzureRecordResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[9]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[9]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -502,7 +502,7 @@ func (x *AzureRecordResponse) String() string {
 func (*AzureRecordResponse) ProtoMessage() {}
 
 func (x *AzureRecordResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[9]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[9]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -515,7 +515,7 @@ func (x *AzureRecordResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use AzureRecordResponse.ProtoReflect.Descriptor instead.
 func (*AzureRecordResponse) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{9}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{9}
 }
 
 func (x *AzureRecordResponse) GetNumRecordsProcessed() int64 {
@@ -543,7 +543,7 @@ type GCPRecordRequest struct {
 func (x *GCPRecordRequest) Reset() {
 	*x = GCPRecordRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[10]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[10]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -556,7 +556,7 @@ func (x *GCPRecordRequest) String() string {
 func (*GCPRecordRequest) ProtoMessage() {}
 
 func (x *GCPRecordRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[10]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[10]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -569,7 +569,7 @@ func (x *GCPRecordRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GCPRecordRequest.ProtoReflect.Descriptor instead.
 func (*GCPRecordRequest) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{10}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{10}
 }
 
 func (x *GCPRecordRequest) GetRecords() []*records.GCPRecord {
@@ -591,7 +591,7 @@ type GCPRecordResponse struct {
 func (x *GCPRecordResponse) Reset() {
 	*x = GCPRecordResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[11]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[11]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -604,7 +604,7 @@ func (x *GCPRecordResponse) String() string {
 func (*GCPRecordResponse) ProtoMessage() {}
 
 func (x *GCPRecordResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[11]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[11]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -617,7 +617,7 @@ func (x *GCPRecordResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GCPRecordResponse.ProtoReflect.Descriptor instead.
 func (*GCPRecordResponse) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{11}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{11}
 }
 
 func (x *GCPRecordResponse) GetNumRecordsProcessed() int64 {
@@ -645,7 +645,7 @@ type RedisRecordRequest struct {
 func (x *RedisRecordRequest) Reset() {
 	*x = RedisRecordRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[12]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[12]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -658,7 +658,7 @@ func (x *RedisRecordRequest) String() string {
 func (*RedisRecordRequest) ProtoMessage() {}
 
 func (x *RedisRecordRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[12]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[12]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -671,7 +671,7 @@ func (x *RedisRecordRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RedisRecordRequest.ProtoReflect.Descriptor instead.
 func (*RedisRecordRequest) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{12}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{12}
 }
 
 func (x *RedisRecordRequest) GetRecords() []*records.RedisRecord {
@@ -693,7 +693,7 @@ type RedisRecordResponse struct {
 func (x *RedisRecordResponse) Reset() {
 	*x = RedisRecordResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[13]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[13]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -706,7 +706,7 @@ func (x *RedisRecordResponse) String() string {
 func (*RedisRecordResponse) ProtoMessage() {}
 
 func (x *RedisRecordResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[13]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[13]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -719,7 +719,7 @@ func (x *RedisRecordResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RedisRecordResponse.ProtoReflect.Descriptor instead.
 func (*RedisRecordResponse) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{13}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{13}
 }
 
 func (x *RedisRecordResponse) GetNumRecordsProcessed() int64 {
@@ -747,7 +747,7 @@ type RedisStreamsRecordRequest struct {
 func (x *RedisStreamsRecordRequest) Reset() {
 	*x = RedisStreamsRecordRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[14]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[14]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -760,7 +760,7 @@ func (x *RedisStreamsRecordRequest) String() string {
 func (*RedisStreamsRecordRequest) ProtoMessage() {}
 
 func (x *RedisStreamsRecordRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[14]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[14]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -773,7 +773,7 @@ func (x *RedisStreamsRecordRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RedisStreamsRecordRequest.ProtoReflect.Descriptor instead.
 func (*RedisStreamsRecordRequest) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{14}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{14}
 }
 
 func (x *RedisStreamsRecordRequest) GetRecords() []*records.RedisStreamsRecord {
@@ -795,7 +795,7 @@ type RedisStreamsRecordResponse struct {
 func (x *RedisStreamsRecordResponse) Reset() {
 	*x = RedisStreamsRecordResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[15]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[15]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -808,7 +808,7 @@ func (x *RedisStreamsRecordResponse) String() string {
 func (*RedisStreamsRecordResponse) ProtoMessage() {}
 
 func (x *RedisStreamsRecordResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[15]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[15]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -821,7 +821,7 @@ func (x *RedisStreamsRecordResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RedisStreamsRecordResponse.ProtoReflect.Descriptor instead.
 func (*RedisStreamsRecordResponse) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{15}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{15}
 }
 
 func (x *RedisStreamsRecordResponse) GetNumRecordsProcessed() int64 {
@@ -849,7 +849,7 @@ type MQTTRecordRequest struct {
 func (x *MQTTRecordRequest) Reset() {
 	*x = MQTTRecordRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[16]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[16]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -862,7 +862,7 @@ func (x *MQTTRecordRequest) String() string {
 func (*MQTTRecordRequest) ProtoMessage() {}
 
 func (x *MQTTRecordRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[16]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[16]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -875,7 +875,7 @@ func (x *MQTTRecordRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use MQTTRecordRequest.ProtoReflect.Descriptor instead.
 func (*MQTTRecordRequest) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{16}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{16}
 }
 
 func (x *MQTTRecordRequest) GetRecords() []*records.MQTTRecord {
@@ -897,7 +897,7 @@ type MQTTRecordResponse struct {
 func (x *MQTTRecordResponse) Reset() {
 	*x = MQTTRecordResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[17]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[17]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -910,7 +910,7 @@ func (x *MQTTRecordResponse) String() string {
 func (*MQTTRecordResponse) ProtoMessage() {}
 
 func (x *MQTTRecordResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[17]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[17]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -923,7 +923,7 @@ func (x *MQTTRecordResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use MQTTRecordResponse.ProtoReflect.Descriptor instead.
 func (*MQTTRecordResponse) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{17}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{17}
 }
 
 func (x *MQTTRecordResponse) GetNumRecordsProcessed() int64 {
@@ -951,7 +951,7 @@ type NSQRecordRequest struct {
 func (x *NSQRecordRequest) Reset() {
 	*x = NSQRecordRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[18]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[18]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -964,7 +964,7 @@ func (x *NSQRecordRequest) String() string {
 func (*NSQRecordRequest) ProtoMessage() {}
 
 func (x *NSQRecordRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[18]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[18]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -977,7 +977,7 @@ func (x *NSQRecordRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use NSQRecordRequest.ProtoReflect.Descriptor instead.
 func (*NSQRecordRequest) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{18}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{18}
 }
 
 func (x *NSQRecordRequest) GetRecords() []*records.NSQRecord {
@@ -999,7 +999,7 @@ type NSQRecordResponse struct {
 func (x *NSQRecordResponse) Reset() {
 	*x = NSQRecordResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[19]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[19]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1012,7 +1012,7 @@ func (x *NSQRecordResponse) String() string {
 func (*NSQRecordResponse) ProtoMessage() {}
 
 func (x *NSQRecordResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[19]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[19]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1025,7 +1025,7 @@ func (x *NSQRecordResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use NSQRecordResponse.ProtoReflect.Descriptor instead.
 func (*NSQRecordResponse) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{19}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{19}
 }
 
 func (x *NSQRecordResponse) GetNumRecordsProcessed() int64 {
@@ -1053,7 +1053,7 @@ type KubeMQRecordRequest struct {
 func (x *KubeMQRecordRequest) Reset() {
 	*x = KubeMQRecordRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[20]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[20]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1066,7 +1066,7 @@ func (x *KubeMQRecordRequest) String() string {
 func (*KubeMQRecordRequest) ProtoMessage() {}
 
 func (x *KubeMQRecordRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[20]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[20]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1079,7 +1079,7 @@ func (x *KubeMQRecordRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use KubeMQRecordRequest.ProtoReflect.Descriptor instead.
 func (*KubeMQRecordRequest) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{20}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{20}
 }
 
 func (x *KubeMQRecordRequest) GetRecords() []*records.KubeMQRecord {
@@ -1101,7 +1101,7 @@ type KubeMQRecordResponse struct {
 func (x *KubeMQRecordResponse) Reset() {
 	*x = KubeMQRecordResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[21]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[21]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1114,7 +1114,7 @@ func (x *KubeMQRecordResponse) String() string {
 func (*KubeMQRecordResponse) ProtoMessage() {}
 
 func (x *KubeMQRecordResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[21]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[21]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1127,7 +1127,7 @@ func (x *KubeMQRecordResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use KubeMQRecordResponse.ProtoReflect.Descriptor instead.
 func (*KubeMQRecordResponse) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{21}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{21}
 }
 
 func (x *KubeMQRecordResponse) GetNumRecordsProcessed() int64 {
@@ -1155,7 +1155,7 @@ type NATSRecordRequest struct {
 func (x *NATSRecordRequest) Reset() {
 	*x = NATSRecordRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[22]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[22]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1168,7 +1168,7 @@ func (x *NATSRecordRequest) String() string {
 func (*NATSRecordRequest) ProtoMessage() {}
 
 func (x *NATSRecordRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[22]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[22]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1181,7 +1181,7 @@ func (x *NATSRecordRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use NATSRecordRequest.ProtoReflect.Descriptor instead.
 func (*NATSRecordRequest) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{22}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{22}
 }
 
 func (x *NATSRecordRequest) GetRecords() []*records.NATSRecord {
@@ -1203,7 +1203,7 @@ type NATSRecordResponse struct {
 func (x *NATSRecordResponse) Reset() {
 	*x = NATSRecordResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[23]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[23]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1216,7 +1216,7 @@ func (x *NATSRecordResponse) String() string {
 func (*NATSRecordResponse) ProtoMessage() {}
 
 func (x *NATSRecordResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[23]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[23]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1229,7 +1229,7 @@ func (x *NATSRecordResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use NATSRecordResponse.ProtoReflect.Descriptor instead.
 func (*NATSRecordResponse) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{23}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{23}
 }
 
 func (x *NATSRecordResponse) GetNumRecordsProcessed() int64 {
@@ -1257,7 +1257,7 @@ type NATSJetStreamRecordRequest struct {
 func (x *NATSJetStreamRecordRequest) Reset() {
 	*x = NATSJetStreamRecordRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[24]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[24]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1270,7 +1270,7 @@ func (x *NATSJetStreamRecordRequest) String() string {
 func (*NATSJetStreamRecordRequest) ProtoMessage() {}
 
 func (x *NATSJetStreamRecordRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[24]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[24]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1283,7 +1283,7 @@ func (x *NATSJetStreamRecordRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use NATSJetStreamRecordRequest.ProtoReflect.Descriptor instead.
 func (*NATSJetStreamRecordRequest) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{24}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{24}
 }
 
 func (x *NATSJetStreamRecordRequest) GetRecords() []*records.NATSJetStreamRecord {
@@ -1305,7 +1305,7 @@ type NATSJetStreamRecordResponse struct {
 func (x *NATSJetStreamRecordResponse) Reset() {
 	*x = NATSJetStreamRecordResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[25]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[25]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1318,7 +1318,7 @@ func (x *NATSJetStreamRecordResponse) String() string {
 func (*NATSJetStreamRecordResponse) ProtoMessage() {}
 
 func (x *NATSJetStreamRecordResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[25]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[25]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1331,7 +1331,7 @@ func (x *NATSJetStreamRecordResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use NATSJetStreamRecordResponse.ProtoReflect.Descriptor instead.
 func (*NATSJetStreamRecordResponse) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{25}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{25}
 }
 
 func (x *NATSJetStreamRecordResponse) GetNumRecordsProcessed() int64 {
@@ -1359,7 +1359,7 @@ type NATSStreamingRecordRequest struct {
 func (x *NATSStreamingRecordRequest) Reset() {
 	*x = NATSStreamingRecordRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[26]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[26]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1372,7 +1372,7 @@ func (x *NATSStreamingRecordRequest) String() string {
 func (*NATSStreamingRecordRequest) ProtoMessage() {}
 
 func (x *NATSStreamingRecordRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[26]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[26]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1385,7 +1385,7 @@ func (x *NATSStreamingRecordRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use NATSStreamingRecordRequest.ProtoReflect.Descriptor instead.
 func (*NATSStreamingRecordRequest) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{26}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{26}
 }
 
 func (x *NATSStreamingRecordRequest) GetRecords() []*records.NATSStreamingRecord {
@@ -1407,7 +1407,7 @@ type NATSStreamingRecordResponse struct {
 func (x *NATSStreamingRecordResponse) Reset() {
 	*x = NATSStreamingRecordResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[27]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[27]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1420,7 +1420,7 @@ func (x *NATSStreamingRecordResponse) String() string {
 func (*NATSStreamingRecordResponse) ProtoMessage() {}
 
 func (x *NATSStreamingRecordResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[27]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[27]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1433,7 +1433,7 @@ func (x *NATSStreamingRecordResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use NATSStreamingRecordResponse.ProtoReflect.Descriptor instead.
 func (*NATSStreamingRecordResponse) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{27}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{27}
 }
 
 func (x *NATSStreamingRecordResponse) GetNumRecordsProcessed() int64 {
@@ -1459,7 +1459,7 @@ type TestRequest struct {
 func (x *TestRequest) Reset() {
 	*x = TestRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[28]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[28]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1472,7 +1472,7 @@ func (x *TestRequest) String() string {
 func (*TestRequest) ProtoMessage() {}
 
 func (x *TestRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[28]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[28]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1485,7 +1485,7 @@ func (x *TestRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TestRequest.ProtoReflect.Descriptor instead.
 func (*TestRequest) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{28}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{28}
 }
 
 type TestResponse struct {
@@ -1499,7 +1499,7 @@ type TestResponse struct {
 func (x *TestResponse) Reset() {
 	*x = TestResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_services_grpccollector_proto_msgTypes[29]
+		mi := &file_services_cs_services_grpccollector_proto_msgTypes[29]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1512,7 +1512,7 @@ func (x *TestResponse) String() string {
 func (*TestResponse) ProtoMessage() {}
 
 func (x *TestResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_services_grpccollector_proto_msgTypes[29]
+	mi := &file_services_cs_services_grpccollector_proto_msgTypes[29]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1525,7 +1525,7 @@ func (x *TestResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TestResponse.ProtoReflect.Descriptor instead.
 func (*TestResponse) Descriptor() ([]byte, []int) {
-	return file_services_grpccollector_proto_rawDescGZIP(), []int{29}
+	return file_services_cs_services_grpccollector_proto_rawDescGZIP(), []int{29}
 }
 
 func (x *TestResponse) GetStatus() *common.Status {
@@ -1535,32 +1535,43 @@ func (x *TestResponse) GetStatus() *common.Status {
 	return nil
 }
 
-var File_services_grpccollector_proto protoreflect.FileDescriptor
+var File_services_cs_services_grpccollector_proto protoreflect.FileDescriptor
 
-var file_services_grpccollector_proto_rawDesc = []byte{
-	0x0a, 0x1c, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2f, 0x67, 0x72, 0x70, 0x63, 0x63,
-	0x6f, 0x6c, 0x6c, 0x65, 0x63, 0x74, 0x6f, 0x72, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x08,
-	0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x1a, 0x13, 0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e,
-	0x2f, 0x73, 0x74, 0x61, 0x74, 0x75, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x12, 0x72,
-	0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x2f, 0x61, 0x6d, 0x71, 0x70, 0x2e, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x1a, 0x13, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x2f, 0x61, 0x7a, 0x75, 0x72, 0x65,
-	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x11, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x2f,
-	0x67, 0x63, 0x70, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x15, 0x72, 0x65, 0x63, 0x6f, 0x72,
-	0x64, 0x73, 0x2f, 0x67, 0x65, 0x6e, 0x65, 0x72, 0x69, 0x63, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
-	0x1a, 0x13, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x2f, 0x6b, 0x61, 0x66, 0x6b, 0x61, 0x2e,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x14, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x2f, 0x6b,
-	0x75, 0x62, 0x65, 0x6d, 0x71, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x12, 0x72, 0x65, 0x63,
-	0x6f, 0x72, 0x64, 0x73, 0x2f, 0x6d, 0x71, 0x74, 0x74, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a,
-	0x12, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x2f, 0x6e, 0x61, 0x74, 0x73, 0x2e, 0x70, 0x72,
-	0x6f, 0x74, 0x6f, 0x1a, 0x1c, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x2f, 0x6e, 0x61, 0x74,
-	0x73, 0x5f, 0x6a, 0x65, 0x74, 0x73, 0x74, 0x72, 0x65, 0x61, 0x6d, 0x2e, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x1a, 0x1c, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x2f, 0x6e, 0x61, 0x74, 0x73, 0x5f,
-	0x73, 0x74, 0x72, 0x65, 0x61, 0x6d, 0x69, 0x6e, 0x67, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a,
-	0x11, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x2f, 0x6e, 0x73, 0x71, 0x2e, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x1a, 0x13, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x2f, 0x72, 0x65, 0x64, 0x69,
-	0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x1b, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73,
-	0x2f, 0x72, 0x65, 0x64, 0x69, 0x73, 0x5f, 0x73, 0x74, 0x72, 0x65, 0x61, 0x6d, 0x73, 0x2e, 0x70,
-	0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x11, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x2f, 0x73, 0x71,
+var file_services_cs_services_grpccollector_proto_rawDesc = []byte{
+	0x0a, 0x28, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2f, 0x63, 0x73, 0x5f, 0x73, 0x65,
+	0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x5f, 0x67, 0x72, 0x70, 0x63, 0x63, 0x6f, 0x6c, 0x6c, 0x65,
+	0x63, 0x74, 0x6f, 0x72, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x08, 0x73, 0x65, 0x72, 0x76,
+	0x69, 0x63, 0x65, 0x73, 0x1a, 0x1d, 0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x2f, 0x63, 0x73, 0x5f,
+	0x63, 0x6f, 0x6d, 0x6d, 0x6f, 0x6e, 0x5f, 0x73, 0x74, 0x61, 0x74, 0x75, 0x73, 0x2e, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x1a, 0x1d, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x2f, 0x63, 0x73, 0x5f,
+	0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x5f, 0x61, 0x6d, 0x71, 0x70, 0x2e, 0x70, 0x72, 0x6f,
+	0x74, 0x6f, 0x1a, 0x1e, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x2f, 0x63, 0x73, 0x5f, 0x72,
+	0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x5f, 0x61, 0x7a, 0x75, 0x72, 0x65, 0x2e, 0x70, 0x72, 0x6f,
+	0x74, 0x6f, 0x1a, 0x1c, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x2f, 0x63, 0x73, 0x5f, 0x72,
+	0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x5f, 0x67, 0x63, 0x70, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x1a, 0x20, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x2f, 0x63, 0x73, 0x5f, 0x72, 0x65, 0x63,
+	0x6f, 0x72, 0x64, 0x73, 0x5f, 0x67, 0x65, 0x6e, 0x65, 0x72, 0x69, 0x63, 0x2e, 0x70, 0x72, 0x6f,
+	0x74, 0x6f, 0x1a, 0x1e, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x2f, 0x63, 0x73, 0x5f, 0x72,
+	0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x5f, 0x6b, 0x61, 0x66, 0x6b, 0x61, 0x2e, 0x70, 0x72, 0x6f,
+	0x74, 0x6f, 0x1a, 0x1f, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x2f, 0x63, 0x73, 0x5f, 0x72,
+	0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x5f, 0x6b, 0x75, 0x62, 0x65, 0x6d, 0x71, 0x2e, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x1a, 0x1d, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x2f, 0x63, 0x73, 0x5f,
+	0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x5f, 0x6d, 0x71, 0x74, 0x74, 0x2e, 0x70, 0x72, 0x6f,
+	0x74, 0x6f, 0x1a, 0x1d, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x2f, 0x63, 0x73, 0x5f, 0x72,
+	0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x5f, 0x6e, 0x61, 0x74, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x1a, 0x27, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x2f, 0x63, 0x73, 0x5f, 0x72, 0x65,
+	0x63, 0x6f, 0x72, 0x64, 0x73, 0x5f, 0x6e, 0x61, 0x74, 0x73, 0x5f, 0x6a, 0x65, 0x74, 0x73, 0x74,
+	0x72, 0x65, 0x61, 0x6d, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x27, 0x72, 0x65, 0x63, 0x6f,
+	0x72, 0x64, 0x73, 0x2f, 0x63, 0x73, 0x5f, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x5f, 0x6e,
+	0x61, 0x74, 0x73, 0x5f, 0x73, 0x74, 0x72, 0x65, 0x61, 0x6d, 0x69, 0x6e, 0x67, 0x2e, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x1a, 0x1c, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x2f, 0x63, 0x73, 0x5f,
+	0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x5f, 0x6e, 0x73, 0x71, 0x2e, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x1a, 0x1e, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x2f, 0x63, 0x73, 0x5f, 0x72, 0x65,
+	0x63, 0x6f, 0x72, 0x64, 0x73, 0x5f, 0x72, 0x65, 0x64, 0x69, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x1a, 0x26, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x2f, 0x63, 0x73, 0x5f, 0x72, 0x65,
+	0x63, 0x6f, 0x72, 0x64, 0x73, 0x5f, 0x72, 0x65, 0x64, 0x69, 0x73, 0x5f, 0x73, 0x74, 0x72, 0x65,
+	0x61, 0x6d, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x1c, 0x72, 0x65, 0x63, 0x6f, 0x72,
+	0x64, 0x73, 0x2f, 0x63, 0x73, 0x5f, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x5f, 0x73, 0x71,
 	0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x48, 0x0a, 0x14, 0x47, 0x65, 0x6e, 0x65, 0x72,
 	0x69, 0x63, 0x52, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12,
 	0x30, 0x0a, 0x07, 0x72, 0x65, 0x63, 0x6f, 0x72, 0x64, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b,
@@ -1819,19 +1830,19 @@ var file_services_grpccollector_proto_rawDesc = []byte{
 }
 
 var (
-	file_services_grpccollector_proto_rawDescOnce sync.Once
-	file_services_grpccollector_proto_rawDescData = file_services_grpccollector_proto_rawDesc
+	file_services_cs_services_grpccollector_proto_rawDescOnce sync.Once
+	file_services_cs_services_grpccollector_proto_rawDescData = file_services_cs_services_grpccollector_proto_rawDesc
 )
 
-func file_services_grpccollector_proto_rawDescGZIP() []byte {
-	file_services_grpccollector_proto_rawDescOnce.Do(func() {
-		file_services_grpccollector_proto_rawDescData = protoimpl.X.CompressGZIP(file_services_grpccollector_proto_rawDescData)
+func file_services_cs_services_grpccollector_proto_rawDescGZIP() []byte {
+	file_services_cs_services_grpccollector_proto_rawDescOnce.Do(func() {
+		file_services_cs_services_grpccollector_proto_rawDescData = protoimpl.X.CompressGZIP(file_services_cs_services_grpccollector_proto_rawDescData)
 	})
-	return file_services_grpccollector_proto_rawDescData
+	return file_services_cs_services_grpccollector_proto_rawDescData
 }
 
-var file_services_grpccollector_proto_msgTypes = make([]protoimpl.MessageInfo, 30)
-var file_services_grpccollector_proto_goTypes = []interface{}{
+var file_services_cs_services_grpccollector_proto_msgTypes = make([]protoimpl.MessageInfo, 30)
+var file_services_cs_services_grpccollector_proto_goTypes = []interface{}{
 	(*GenericRecordRequest)(nil),        // 0: services.GenericRecordRequest
 	(*GenericRecordResponse)(nil),       // 1: services.GenericRecordResponse
 	(*AMQPRecordRequest)(nil),           // 2: services.AMQPRecordRequest
@@ -1878,7 +1889,7 @@ var file_services_grpccollector_proto_goTypes = []interface{}{
 	(*records.NATSJetStreamRecord)(nil), // 43: records.NATSJetStreamRecord
 	(*records.NATSStreamingRecord)(nil), // 44: records.NATSStreamingRecord
 }
-var file_services_grpccollector_proto_depIdxs = []int32{
+var file_services_cs_services_grpccollector_proto_depIdxs = []int32{
 	30, // 0: services.GenericRecordRequest.records:type_name -> records.GenericRecord
 	31, // 1: services.GenericRecordResponse.status:type_name -> events.Status
 	32, // 2: services.AMQPRecordRequest.records:type_name -> records.AMQPSinkRecord
@@ -1945,13 +1956,13 @@ var file_services_grpccollector_proto_depIdxs = []int32{
 	0,  // [0:29] is the sub-list for field type_name
 }
 
-func init() { file_services_grpccollector_proto_init() }
-func file_services_grpccollector_proto_init() {
-	if File_services_grpccollector_proto != nil {
+func init() { file_services_cs_services_grpccollector_proto_init() }
+func file_services_cs_services_grpccollector_proto_init() {
+	if File_services_cs_services_grpccollector_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_services_grpccollector_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GenericRecordRequest); i {
 			case 0:
 				return &v.state
@@ -1963,7 +1974,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GenericRecordResponse); i {
 			case 0:
 				return &v.state
@@ -1975,7 +1986,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*AMQPRecordRequest); i {
 			case 0:
 				return &v.state
@@ -1987,7 +1998,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*AMQPRecordResponse); i {
 			case 0:
 				return &v.state
@@ -1999,7 +2010,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*KafkaSinkRecordRequest); i {
 			case 0:
 				return &v.state
@@ -2011,7 +2022,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*KafkaSinkRecordResponse); i {
 			case 0:
 				return &v.state
@@ -2023,7 +2034,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SQSRecordRequest); i {
 			case 0:
 				return &v.state
@@ -2035,7 +2046,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SQSRecordResponse); i {
 			case 0:
 				return &v.state
@@ -2047,7 +2058,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*AzureRecordRequest); i {
 			case 0:
 				return &v.state
@@ -2059,7 +2070,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*AzureRecordResponse); i {
 			case 0:
 				return &v.state
@@ -2071,7 +2082,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GCPRecordRequest); i {
 			case 0:
 				return &v.state
@@ -2083,7 +2094,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GCPRecordResponse); i {
 			case 0:
 				return &v.state
@@ -2095,7 +2106,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*RedisRecordRequest); i {
 			case 0:
 				return &v.state
@@ -2107,7 +2118,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*RedisRecordResponse); i {
 			case 0:
 				return &v.state
@@ -2119,7 +2130,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*RedisStreamsRecordRequest); i {
 			case 0:
 				return &v.state
@@ -2131,7 +2142,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[15].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[15].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*RedisStreamsRecordResponse); i {
 			case 0:
 				return &v.state
@@ -2143,7 +2154,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MQTTRecordRequest); i {
 			case 0:
 				return &v.state
@@ -2155,7 +2166,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*MQTTRecordResponse); i {
 			case 0:
 				return &v.state
@@ -2167,7 +2178,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[18].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[18].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*NSQRecordRequest); i {
 			case 0:
 				return &v.state
@@ -2179,7 +2190,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[19].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[19].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*NSQRecordResponse); i {
 			case 0:
 				return &v.state
@@ -2191,7 +2202,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[20].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[20].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*KubeMQRecordRequest); i {
 			case 0:
 				return &v.state
@@ -2203,7 +2214,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[21].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[21].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*KubeMQRecordResponse); i {
 			case 0:
 				return &v.state
@@ -2215,7 +2226,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[22].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[22].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*NATSRecordRequest); i {
 			case 0:
 				return &v.state
@@ -2227,7 +2238,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[23].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[23].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*NATSRecordResponse); i {
 			case 0:
 				return &v.state
@@ -2239,7 +2250,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[24].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[24].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*NATSJetStreamRecordRequest); i {
 			case 0:
 				return &v.state
@@ -2251,7 +2262,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[25].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[25].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*NATSJetStreamRecordResponse); i {
 			case 0:
 				return &v.state
@@ -2263,7 +2274,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[26].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[26].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*NATSStreamingRecordRequest); i {
 			case 0:
 				return &v.state
@@ -2275,7 +2286,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[27].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[27].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*NATSStreamingRecordResponse); i {
 			case 0:
 				return &v.state
@@ -2287,7 +2298,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[28].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[28].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*TestRequest); i {
 			case 0:
 				return &v.state
@@ -2299,7 +2310,7 @@ func file_services_grpccollector_proto_init() {
 				return nil
 			}
 		}
-		file_services_grpccollector_proto_msgTypes[29].Exporter = func(v interface{}, i int) interface{} {
+		file_services_cs_services_grpccollector_proto_msgTypes[29].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*TestResponse); i {
 			case 0:
 				return &v.state
@@ -2316,18 +2327,18 @@ func file_services_grpccollector_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_services_grpccollector_proto_rawDesc,
+			RawDescriptor: file_services_cs_services_grpccollector_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   30,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_services_grpccollector_proto_goTypes,
-		DependencyIndexes: file_services_grpccollector_proto_depIdxs,
-		MessageInfos:      file_services_grpccollector_proto_msgTypes,
+		GoTypes:           file_services_cs_services_grpccollector_proto_goTypes,
+		DependencyIndexes: file_services_cs_services_grpccollector_proto_depIdxs,
+		MessageInfos:      file_services_cs_services_grpccollector_proto_msgTypes,
 	}.Build()
-	File_services_grpccollector_proto = out.File
-	file_services_grpccollector_proto_rawDesc = nil
-	file_services_grpccollector_proto_goTypes = nil
-	file_services_grpccollector_proto_depIdxs = nil
+	File_services_cs_services_grpccollector_proto = out.File
+	file_services_cs_services_grpccollector_proto_rawDesc = nil
+	file_services_cs_services_grpccollector_proto_goTypes = nil
+	file_services_cs_services_grpccollector_proto_depIdxs = nil
 }
