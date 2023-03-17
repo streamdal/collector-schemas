@@ -42,40 +42,56 @@ generate/go:
 	mkdir -p build/go/protos/events
 	mkdir -p build/go/protos/services
 
-	docker run --rm -w $(PWD) -v $(PWD):$(PWD) -w${PWD} jaegertracing/protobuf:0.2.0 \
-	--proto_path=./protos \
-	--proto_path=./protos/common \
-	--proto_path=./protos/records \
-	--proto_path=./protos/events \
-	--proto_path=./protos/services \
-	--go_out=plugins=grpc:build/go/protos \
-	--go_opt=paths=source_relative \
-	protos/services/*.proto
+	docker run --platform linux/amd64 --rm -w $(PWD) -v $(PWD):/defs -w${PWD} namely/protoc-all:1.51_1 \
+		--go-source-relative \
+		-l go \
+		-i /defs/protos \
+		-i /defs/protos/common \
+		-i /defs/protos/records \
+		-i /defs/protos/events \
+		-d /defs/protos/services \
+		-o /defs/build/go/protos \
+		protos/services/*.proto
 
 
-	docker run --rm -w $(PWD) -v $(PWD):$(PWD) -w${PWD} jaegertracing/protobuf:0.2.0 \
-	--proto_path=./protos/common \
-	--go_out=plugins=grpc:build/go/protos/common \
-	--go_opt=paths=source_relative \
-	protos/common/*.proto
+	docker run --platform linux/amd64 --rm -w $(PWD) -v $(PWD):/defs -w${PWD} namely/protoc-all:1.51_1 \
+		-d /defs/protos/common \
+		--go-source-relative \
+		-l go \
+		-o /defs/build/go/protos/common \
+		protos/common/*.proto
 
-	docker run --rm -w $(PWD) -v $(PWD):$(PWD) -w${PWD} jaegertracing/protobuf:0.2.0 \
-	--proto_path=./protos/records \
-	--go_out=plugins=grpc:build/go/protos/records \
-	--go_opt=paths=source_relative \
-	protos/records/*.proto
+	docker run --platform linux/amd64 --rm -w $(PWD) -v $(PWD):/defs -w${PWD} namely/protoc-all:1.51_1 \
+		-d /defs/protos/records \
+		--go-source-relative \
+		-l go \
+		-o /defs/build/go/protos/records \
+		protos/records/*.proto
 
-	docker run --rm -w $(PWD) -v $(PWD):$(PWD) -w${PWD} jaegertracing/protobuf:0.2.0 \
-	--proto_path=./protos/events \
-	--go_out=plugins=grpc:build/go/protos/events \
-	--go_opt=paths=source_relative \
-	protos/events/*.proto
+	docker run --platform linux/amd64 --rm -w $(PWD) -v $(PWD):/defs -w${PWD} namely/protoc-all:1.51_1 \
+		-d /defs/protos/events \
+		--go-source-relative \
+		-l go \
+		-o /defs/build/go/protos/events \
+		protos/events/*.proto
 
-	docker run --rm -w $(PWD) -v $(PWD):$(PWD) -w${PWD} jaegertracing/protobuf:0.2.0 \
-	--proto_path=./protos \
-	--go_out=plugins=grpc:build/go/protos \
-	--go_opt=paths=source_relative \
-	protos/records/*.proto
+# Protoset files contain binary encoded google.protobuf.FileDescriptorSet protos
+.PHONY: generate/protoset
+generate/protoset: description = Generate protoset for services
+generate/protoset:
+	mkdir -p build/go/protoset/
+	docker run --platform linux/amd64 -w $(PWD) -v $(PWD):/defs namely/protoc-all:1.51_1 \
+		-i /defs/protos \
+		-i /defs/protos/common \
+		-i /defs/protos/records \
+		-i /defs/protos/events \
+		-d /defs/protos/services \
+		-l descriptor_set \
+		-o /defs/build/go/protoset/ \
+		--descr-include-imports \
+		--descr-include-source-info \
+		--descr-filename events.protoset \
+		protos/**/*.proto
 
 .PHONY: local
 local: description = Compile protobuf schemas for Go and copy to plumber/grpc-collector projects
