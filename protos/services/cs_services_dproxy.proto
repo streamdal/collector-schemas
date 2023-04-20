@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package services;
 
-import "events/tunnel.proto";
+import "events/cs_events_tunnel.proto";
 
 option go_package = "github.com/batchcorp/collector-schemas/build/go/protos/services";
 option java_package = "sh.batch.services";

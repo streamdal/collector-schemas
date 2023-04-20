@@ -2,21 +2,21 @@ syntax = "proto3";
 
 package services;
 
-import "common/status.proto";
-import "records/amqp.proto";
-import "records/azure.proto";
-import "records/gcp.proto";
-import "records/generic.proto";
-import "records/kafka.proto";
-import "records/kubemq.proto";
-import "records/mqtt.proto";
-import "records/nats.proto";
-import "records/nats_jetstream.proto";
-import "records/nats_streaming.proto";
-import "records/nsq.proto";
-import "records/redis.proto";
-import "records/redis_streams.proto";
-import "records/sqs.proto";
+import "common/cs_common_status.proto";
+import "records/cs_records_amqp.proto";
+import "records/cs_records_azure.proto";
+import "records/cs_records_gcp.proto";
+import "records/cs_records_generic.proto";
+import "records/cs_records_kafka.proto";
+import "records/cs_records_kubemq.proto";
+import "records/cs_records_mqtt.proto";
+import "records/cs_records_nats.proto";
+import "records/cs_records_nats_jetstream.proto";
+import "records/cs_records_nats_streaming.proto";
+import "records/cs_records_nsq.proto";
+import "records/cs_records_redis.proto";
+import "records/cs_records_redis_streams.proto";
+import "records/cs_records_sqs.proto";
 
 option go_package = "github.com/batchcorp/collector-schemas/build/go/protos/services";
 option java_package = "sh.batch.services";
